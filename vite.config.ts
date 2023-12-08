@@ -73,7 +73,7 @@ export default defineConfig(({ mode }) => {
 			lib: {
 				// Could also be a dictionary or array of multiple entry points
 				entry: resolve(__dirname, 'src/index.tsx'),
-				name: 'test-linaria-library',
+				name: 'react-spinner-library',
 				// the proper extensions will be added
 				fileName: 'index',
 				formats: ['es'],

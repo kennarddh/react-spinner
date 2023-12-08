@@ -5,7 +5,7 @@
 	"files": [
 		"build"
 	],
-	"module": "./build/index.mjs",
+	"module": "./build/index.js",
 	"types": "./build/index.d.ts",
 	"type": "module",
 	"scripts": {
