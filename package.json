@@ -65,7 +65,8 @@
 		"@linaria/babel-preset": "^5.0.3",
 		"@linaria/vite": "^5.0.3",
 		"@babel/preset-react": "^7.22.15",
-		"@babel/preset-typescript": "^7.23.2"
+		"@babel/preset-typescript": "^7.23.2",
+		"vite-plugin-dts": "^3.6.1"
 	},
 	"dependencies": {
 		"react": "^18.2.0",
