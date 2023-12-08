@@ -1,14 +1,31 @@
-import React from 'react'
+import { styled } from '@linaria/react'
 
-import ReactDOM from 'react-dom/client'
+const Spinner = styled.div<{
+	width: number
+	height: number
+	outlineWidth: number
+	fullRotationTime: number
+	color: string
+	backgroundColor: string
+}>`
+	width: ${props => props.width}px;
+	height: ${props => props.height}px;
+	border: ${props => props.outlineWidth}px solid
+		${props => props.backgroundColor};
+	border-bottom-color: ${props => props.color};
+	border-radius: 50%;
+	display: inline-block;
+	box-sizing: border-box;
+	animation: rotation ${props => props.fullRotationTime}s linear infinite;
 
-import App from './App'
-import './Styles'
+	@keyframes rotation {
+		0% {
+			transform: rotate(0deg);
+		}
+		100% {
+			transform: rotate(360deg);
+		}
+	}
+`
 
-const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
-
-root.render(
-	<React.StrictMode>
-		<App />
-	</React.StrictMode>,
-)
+export default Spinner
