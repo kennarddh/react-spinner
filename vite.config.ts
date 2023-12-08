@@ -5,6 +5,7 @@ import react from '@vitejs/plugin-react'
 import { checker } from 'vite-plugin-checker'
 import svgr from 'vite-plugin-svgr'
 
+import linaria from '@linaria/vite'
 import { resolve } from 'node:path'
 
 export const relativeAlias: Record<string, string> = {
@@ -47,6 +48,15 @@ export default defineConfig(({ mode }) => {
 						},
 				  }) // eslint-disable-line no-mixed-spaces-and-tabs
 				: null,
+			linaria({
+				include: ['**/*.{ts,tsx}'],
+				babelOptions: {
+					presets: [
+						'@babel/preset-typescript',
+						'@babel/preset-react',
+					],
+				},
+			}),
 		],
 		resolve: {
 			alias: resolveAlias,
@@ -58,6 +68,22 @@ export default defineConfig(({ mode }) => {
 		envPrefix,
 		build: {
 			outDir: 'build',
+			lib: {
+				// Could also be a dictionary or array of multiple entry points
+				entry: resolve(__dirname, 'src/index.tsx'),
+				name: 'test-linaria-library',
+				// the proper extensions will be added
+				fileName: 'index',
+				formats: ['es'],
+			},
+			rollupOptions: {
+				external: [
+					'@linaria/core',
+					'@linaria/react',
+					'react',
+					'react-dom',
+				],
+			},
 		},
 	}
 })
