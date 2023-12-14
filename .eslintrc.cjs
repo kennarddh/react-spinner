@@ -20,17 +20,7 @@ module.exports = {
 		process: 'readonly',
 		__dirname: 'readonly',
 	},
-	extends: [
-		'eslint:recommended',
-		'plugin:react/recommended',
-		'plugin:import/recommended',
-		'plugin:import/typescript',
-		'plugin:react-hooks/recommended',
-		'plugin:json/recommended',
-		'plugin:security/recommended',
-		'plugin:@typescript-eslint/eslint-recommended',
-		'plugin:@typescript-eslint/recommended',
-	],
+	extends: ['eslint:recommended', 'plugin:react/recommended', 'plugin:import/recommended', 'plugin:import/typescript', 'plugin:react-hooks/recommended', 'plugin:json/recommended', 'plugin:security/recommended', 'plugin:@typescript-eslint/eslint-recommended', 'plugin:@typescript-eslint/recommended', 'plugin:storybook/recommended'],
 	plugins: ['react', 'prettier', 'jsx-a11y', '@typescript-eslint'],
 	parserOptions: {
 		ecmaFeatures: {
