@@ -11,12 +11,20 @@ type Story = StoryObj<typeof Spinner>
 export const Primary: Story = {
 	render: args => <Spinner {...args} />,
 	argTypes: {
-		width: { type: 'number', defaultValue: 50 },
-		height: { type: 'number', defaultValue: 50 },
-		outlineWidth: { type: 'number', defaultValue: 5 },
-		fullRotationTime: { type: 'number', defaultValue: 1 },
-		color: { type: 'string', defaultValue: '#00ff00' },
-		backgroundColor: { type: 'string', defaultValue: '#ff0000' },
+		width: { type: 'number' },
+		height: { type: 'number' },
+		outlineWidth: { type: 'number' },
+		fullRotationTime: { type: 'number' },
+		color: { type: 'string' },
+		backgroundColor: { type: 'string' },
+	},
+	args: {
+		width: 50,
+		height: 50,
+		outlineWidth: 5,
+		fullRotationTime: 1,
+		color: '#00ff00',
+		backgroundColor: '#ff0000',
 	},
 }
 
