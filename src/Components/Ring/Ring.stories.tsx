@@ -1,15 +1,15 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
-import Spinner from './Spinner'
+import Ring from './Ring'
 
-const meta: Meta<typeof Spinner> = {
-	component: Spinner,
+const meta: Meta<typeof Ring> = {
+	component: Ring,
 }
 
-type Story = StoryObj<typeof Spinner>
+type Story = StoryObj<typeof Ring>
 
 export const Primary: Story = {
-	render: args => <Spinner {...args} />,
+	render: args => <Ring {...args} />,
 	argTypes: {
 		width: { type: 'number' },
 		height: { type: 'number' },

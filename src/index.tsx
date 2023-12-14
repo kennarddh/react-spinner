@@ -1,1 +1,1 @@
-export { default as Spinner } from 'Components/Spinner'
+export { default as Ring } from 'Components/Ring/Ring'

@@ -1,6 +1,6 @@
 import { styled } from '@linaria/react'
 
-const RotateSpinner = styled.span<{
+const Ring = styled.span<{
 	width: number
 	height: number
 	outlineWidth: number
@@ -28,4 +28,4 @@ const RotateSpinner = styled.span<{
 	}
 `
 
-export default RotateSpinner
+export default Ring
