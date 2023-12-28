@@ -102,15 +102,15 @@ const Pacman: FC<{
 	headMaxRotation: number
 	spawnDistance: number
 }> = ({
-	width,
-	height,
-	dotSize,
-	headOpenTime,
-	dotMoveTime,
-	headColor,
-	dotColor,
-	headMaxRotation,
-	spawnDistance,
+	width = 50,
+	height = 50,
+	dotSize = 15,
+	headOpenTime = 0.5,
+	dotMoveTime = 2,
+	headColor = '#ffd600',
+	dotColor = '#fff1bf',
+	headMaxRotation = 45,
+	spawnDistance = 100,
 }) => {
 	const BaseFoodDelay = useMemo(
 		() =>

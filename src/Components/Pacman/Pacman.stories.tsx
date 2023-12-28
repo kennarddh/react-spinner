@@ -21,17 +21,6 @@ export const Primary: Story = {
 		dotMoveTime: { type: 'number' },
 		dotColor: { type: 'string' },
 	},
-	args: {
-		width: 50,
-		height: 50,
-		headOpenTime: 0.5,
-		headColor: '#00ff00',
-		headMaxRotation: 44,
-		spawnDistance: 100,
-		dotSize: 20,
-		dotMoveTime: 1,
-		dotColor: '#ff00ff',
-	},
 }
 
 export default meta
