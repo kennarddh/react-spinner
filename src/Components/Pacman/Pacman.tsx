@@ -92,15 +92,15 @@ const PacmanFood = styled.span<{
 `
 
 const Pacman: FC<{
-	width: number
-	height: number
-	dotSize: number
-	headOpenTime: number
-	dotMoveTime: number
-	headColor: string
-	dotColor: string
-	headMaxRotation: number
-	spawnDistance: number
+	width?: number
+	height?: number
+	dotSize?: number
+	headOpenTime?: number
+	dotMoveTime?: number
+	headColor?: string
+	dotColor?: string
+	headMaxRotation?: number
+	spawnDistance?: number
 }> = ({
 	width = 50,
 	height = 50,
