@@ -1,4 +1,4 @@
-import { FC } from 'react'
+import { FC, useMemo } from 'react'
 
 import { styled } from '@linaria/react'
 
@@ -112,6 +112,14 @@ const Pacman: FC<{
 	headMaxRotation,
 	spawnDistance,
 }) => {
+	const BaseFoodDelay = useMemo(
+		() =>
+			((spawnDistance - dotSize * 4) / 4) *
+				(dotMoveTime / spawnDistance) +
+			(dotSize / spawnDistance) * dotMoveTime,
+		[dotMoveTime, dotSize, spawnDistance],
+	)
+
 	return (
 		<PacmanContainer width={width} height={height}>
 			<PacmanHead
@@ -137,36 +145,21 @@ const Pacman: FC<{
 				spawnDistance={spawnDistance}
 			/>
 			<PacmanFood
-				delay={
-					(((spawnDistance - dotSize * 4) / 4) *
-						(dotMoveTime / spawnDistance) +
-						(dotSize / spawnDistance) * dotMoveTime) *
-					1
-				}
+				delay={BaseFoodDelay}
 				color={dotColor}
 				duration={dotMoveTime}
 				size={dotSize}
 				spawnDistance={spawnDistance}
 			/>
 			<PacmanFood
-				delay={
-					(((spawnDistance - dotSize * 4) / 4) *
-						(dotMoveTime / spawnDistance) +
-						(dotSize / spawnDistance) * dotMoveTime) *
-					2
-				}
+				delay={BaseFoodDelay * 2}
 				color={dotColor}
 				duration={dotMoveTime}
 				size={dotSize}
 				spawnDistance={spawnDistance}
 			/>
 			<PacmanFood
-				delay={
-					(((spawnDistance - dotSize * 4) / 4) *
-						(dotMoveTime / spawnDistance) +
-						(dotSize / spawnDistance) * dotMoveTime) *
-					3
-				}
+				delay={BaseFoodDelay * 3}
 				color={dotColor}
 				duration={dotMoveTime}
 				size={dotSize}
